@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --buildsystem R
+
+## Fixup permissions
+override_dh_fixperms:
+	dh_fixperms
+	find debian -name "*.h" -type f -exec chmod -x \{\} \;
+	find debian -name "CITATION" -type f -exec chmod -x \{\} \;
+	find debian -name "*.Rnw" -type f -exec chmod -x \{\} \;

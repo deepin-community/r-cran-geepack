@@ -1,0 +1,40 @@
+Explanation for binary files inside source package according to
+  https://lists.debian.org/debian-devel/2013/09/msg00332.html
+
+Files: data/dietox.rda
+Documented: man/dietox.Rd
+  Growth curves of pigs in a 3x3 factorial experiment
+
+Files: data/koch.RData
+Documented: man/koch.Rd
+  Ordinal Data from Koch
+
+Files: data/muscatine.rda
+Documented: man/muscatine.Rd
+  Data on Obesity from the Muscatine Coronary Risk Factor Study.
+
+Files: data/ohio.RData
+Documented: man/ohio.Rd
+  Ohio Children Wheeze Status
+
+Files: data/respdis.RData
+Documented: man/respdis.Rd
+  Clustered Ordinal Respiratory Disorder
+
+Files: data/respiratory.RData
+Documented: man/respiratory.Rd
+  Data from a clinical trial comparing two treatments for a respiratory
+
+Files: data/seizure.RData
+Documented: man/seizure.Rd
+  Epiliptic Seizures
+
+Files: data/sitka89.RData
+Documented: man/sitka89.Rd
+  Growth of Sitka Spruce Trees
+
+Files: data/spruce.RData
+Documented: man/spruce.Rd
+  Log-size of 79 Sitka spruce trees
+
+ -- Dylan Aïssi <daissi@debian.org>  Mon, 30 Dec 2019 23:11:11 +0100

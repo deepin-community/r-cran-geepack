@@ -1,0 +1,61 @@
+r-cran-geepack (1.3-2-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version
+  * Standards-Version: 4.5.1 (routine-update)
+  * debhelper-compat 13 (routine-update)
+  * Add salsa-ci file (routine-update)
+  * Rules-Requires-Root: no (routine-update)
+
+ -- Andreas Tille <tille@debian.org>  Fri, 15 Jan 2021 20:07:57 +0100
+
+r-cran-geepack (1.3-1-1) unstable; urgency=medium
+
+  [ Jelmer Vernooĳ ]
+  * Use secure URI in Homepage field.
+
+  [ Dylan Aïssi ]
+  * debhelper-compat 12
+  * Standards-Version: 4.4.1
+
+ -- Dylan Aïssi <daissi@debian.org>  Mon, 30 Dec 2019 23:04:39 +0100
+
+r-cran-geepack (1.2-1-2) unstable; urgency=medium
+
+  * Team upload.
+  * debhelper 11
+  * Maintainer: Debian R Packages Maintainers <r-pkg-team@alioth-
+    lists.debian.net>
+  * Point Vcs fields to salsa.debian.org
+  * dh-update-R to update Build-Depends
+
+ -- Andreas Tille <tille@debian.org>  Thu, 21 Jun 2018 07:02:08 +0200
+
+r-cran-geepack (1.2-1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version
+  * d/watch:
+     - version=4
+     - fix regexp
+  * Take over packaging into Debian Science team
+  * cme fix dpkg-control
+  * Convert to dh-r
+  * Canonical CRAN homepage
+  * debhelper 10
+  * remove empty debian/doc
+
+ -- Andreas Tille <tille@debian.org>  Fri, 16 Dec 2016 15:56:03 +0100
+
+r-cran-geepack (1.2-0.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Appears to fix FTBFS error (Closes: #830461).
+
+ -- Chris Lawrence <lawrencc@debian.org>  Tue, 16 Aug 2016 20:53:33 -0400
+
+r-cran-geepack (1.2-0-1) unstable; urgency=low
+
+  * Initial release (Closes: #805258).
+
+ -- Chris Lawrence <lawrencc@debian.org>  Sun, 15 Nov 2015 20:48:18 -0500
