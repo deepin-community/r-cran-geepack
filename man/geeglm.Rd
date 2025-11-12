@@ -96,24 +96,24 @@ An object of type 'geeglm'
 }
 \description{
 The geeglm function fits generalized estimating equations using
-    the 'geese.fit' function of the 'geepack' package for doing the actual
-    computations. geeglm has a syntax similar to glm and returns an object
-    similar to a glm object.  An important feature of geeglm, is that an
-    anova method exists for these models.
+the 'geese.fit' function of the 'geepack' package for doing the actual
+computations. geeglm has a syntax similar to glm and returns an object
+similar to a glm object.  An important feature of geeglm, is that an
+anova method exists for these models.
 }
 \details{
 In the case of corstr="fixed" one must provide the zcor vector if
-    the clusters have unequal sizes. Clusters with size one must not be
-    represented in zcor.
+the clusters have unequal sizes. Clusters with size one must not be
+represented in zcor.
 }
 \note{
 See the documentation for the 'geese' function for additional
-    information. geeglm only works for complete data. Thus if there are NA's
-    in data you can specify data=na.omit(mydata).
+information. geeglm only works for complete data. Thus if there are NA's
+in data you can specify data=na.omit(mydata).
 }
 \section{Warning }{
  Use "unstructured" correlation structure only with great
-    care. (It may cause R to crash).
+care. (It may cause R to crash).
 }
 
 \examples{
@@ -132,6 +132,24 @@ mf2 <- formula(Weight ~ Cu * Time + I(Time^2) + I(Time^3))
 gee2 <- geeglm(mf2, data=dietox, id=Pig, family=poisson("identity"), corstr="ar1")
 anova(gee2)
 
+# Notice the difference here: Clusters of observations must
+# appear as chunks in data. 
+
+set.seed(1)
+chick1 <- ChickWeight
+chick2 <- chick1[sample(nrow(chick1)),]
+chick3 <- chick2[order(chick2$Chick),]
+
+fit1 <- geeglm(weight~Time, id=Chick, data=chick1)
+fit2 <- geeglm(weight~Time, id=Chick, data=chick2)
+fit3 <- geeglm(weight~Time, id=Chick, data=chick3)
+
+vcov(fit1)
+vcov(fit2)
+vcov(fit3)
+
+
+
 }
 \references{
 Halekoh, U.; Højsgaard, S. and Yan, J (2006)
@@ -139,11 +157,11 @@ The R Package geepack for Generalized Estimating Equations.
 Journal of Statistical Software, 15, 2, 1-11"
 
 Liang, K.Y. and Zeger, S.L. (1986) Longitudinal data analysis using
-generalized linear models. Biometrika, *73* 13-22.
+generalized linear models. Biometrika, \emph{73} 13-22.
 
 Prentice, R.L. and Zhao, L.P. (1991). Estimating equations for
 parameters in means and covariances of multivariate discrete and
-continuous responses.  Biometrics, *47* 825-839.
+continuous responses.  Biometrics, \emph{47} 825-839.
 }
 \seealso{
 \code{\link{geese}}, \code{\link{glm}}, \code{\link{anova.geeglm}}
